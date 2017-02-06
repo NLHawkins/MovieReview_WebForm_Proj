@@ -13,26 +13,29 @@ namespace MovieReview_WebForm_Proj
     {
         public static List<Movie> Movies;
         public Movie movieInstance;
+        public Movie nullMovie;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //var movieName = Request.QueryString["id"]; 
+            
             using (var db = new MRContext())
             {
-                //movieInstance = db.Movies.First(n => n.Title == movieName);
-                //if (IsPostBack)
+                
+                Movies = db.Movies.ToList();
+               
+                if (IsPostBack)
                 {
-                    Movies = db.Movies.ToList();
-                    /*
+                    movieInstance = db.Movies.First(n => n.Title == Request.Form["title"]);
+                    
                     movieInstance.Title = Request.Form["title"];
-                   movieInstance.Genre = Request.Form["genre"];
+                    movieInstance.Genre = Request.Form["genre"];
                     movieInstance.Link = Request.Form["link"];
                     movieInstance.Release = Request.Form["release"];
 
                     db.Entry(movieInstance).State = EntityState.Modified;
                     db.SaveChanges();
                     Response.Redirect("Default.aspx");
-                    */
+                    
                 }
             } 
 

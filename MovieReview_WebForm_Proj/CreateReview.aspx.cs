@@ -10,31 +10,28 @@ namespace MovieReview_WebForm_Proj
 {
     public partial class CreateReview : System.Web.UI.Page
     {
-        public int idCheck;
+
         public Movie movieInstance;
         public List<Movie> Movies;
+        int movieId;
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            var movieId = int.Parse(Request.QueryString["id"]);
-            var movieName = Request.Form["reviewMovieName"];
+            if (!IsPostBack)
+            {
+                movieId = int.Parse(Request.QueryString["id"]);
+            }
+            else
+            {
+                movieId = int.Parse(Request.Form["movieId"]);
+            }
             using (var db = new MRContext())
             {
-                if(movieName == null)
-                {
-                    movieInstance = db.Movies.First(n => n.Id == movieId);
-                }
-                else
-                {
-                    movieInstance = db.Movies.First(n => n.Title == movieName);
-                }
-                
-               Movies = db.Movies.ToList();
 
-               if (IsPostBack)
-                {
+                Movies = db.Movies.ToList();
+                movieInstance = db.Movies.Where(i => i.Id == movieId).First();
 
-                
+                if (IsPostBack)
+                {
                     var review = new Review
                     {
                         MovieId = movieInstance.Id,
@@ -46,12 +43,10 @@ namespace MovieReview_WebForm_Proj
                     };
                     db.Reviews.Add(review);
                     db.SaveChanges();
-
                     Response.Redirect("Default.aspx");
-
                 }
-                
             }
+
         }
     }
 }

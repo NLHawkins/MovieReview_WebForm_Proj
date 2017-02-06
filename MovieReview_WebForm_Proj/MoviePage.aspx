@@ -10,7 +10,7 @@
 <body>
 
     <div class="container">
-        <h1>Reviews for "Movie"</h1>
+        <h1>Movies in Db</h1>
         <table class="table">
             <thead>
                 <tr>
@@ -41,14 +41,42 @@
                     <td><%=movie.Link %></td>
                     <td><%=movie.Release %></td>
                 </tr>
+
                 <%} %>
             </tbody>
         </table>
-        
-        
-        <br />
+        <form class="form-inline" runat="server" action="AddMovie.aspx" method="post">
+            <h4>-or-</h4>
+            <h3>Add New Movie</h3>
+            <div class="form-group">
+                <label for="movieTitle">Title</label>
+                <input type="text" class="form-control" name="movieTitle" placeholder="Movie Name" />
+            </div>
+            <div class="form-group">
+                <label for="movieGenre">Genre</label>
+                <input type="text" class="form-control" name="movieGenre" placeholder="Drama, Comedy, Thriller" />
+            </div>
+            <div class="form-group">
+                <label for="movieLink">Link</label>
+                <input type="text" class="form-control" name="movieLink" placeholder="www.thisMovie.com" />
+            </div>
+            <div class="form-group">
+                <label for="movieRelease">Release Date</label>
+                <input type="text" class="form-control" name="movieRelease" placeholder="ex. 3/7/1987" />
+            </div>
+            <button type="submit" class="btn btn-default">Add Movie</button>
+        </form>
 
 
+
+        <script src="Scripts/jquery-1.9.1.js" type="text/javascript"></script>
+        <script src="Scripts/bootstrap.js" type="text/javascript"></script>
     </div>
+
+
+
+
+
+
 </body>
 </html>

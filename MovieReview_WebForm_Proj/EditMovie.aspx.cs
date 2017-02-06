@@ -20,7 +20,7 @@ namespace MovieReview_WebForm_Proj
                 var movieId = int.Parse(Request.QueryString["id"]);
                 using (var db = new MRContext())
                 {
-                    movieInstance = db.Movies.First(n => n.Id == movieId);
+                movieInstance = db.Movies.Where(i => i.Id == movieId).First();
                     if (IsPostBack)
                     {
                        

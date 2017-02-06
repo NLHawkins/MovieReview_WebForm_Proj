@@ -23,7 +23,7 @@
                 <%foreach (var review in Reviews)
                     {%>
                 <tr>
-                    <td><a href="MoviePage.aspx?id=<%=review.Movie.Id %>"><%=review.Movie.Title %></a></td>
+                    <td><%=review.Movie.Title %></td>
                     <td><%=review.Name %></td>
                     <td><%=review.Rating %></td>
                 </tr>
@@ -32,19 +32,13 @@
         </table>
         
         <br />
-        <form class="form-inline">
-            <div class="form-group">
-                <label for="movieToReview">Choose Movie</label>
-                <select class="form-control" id="movieToReview">
-                    <%foreach (var movie in Movies)
-                        {%>
-                    <option><%=movie.Title %></option>
-                    <%} %>
-                </select>                
-            </div>
-            <button type="submit" class="btn btn-default">Review Movie</button>
-            <a type="button" class="btn btn-default" href="CreateMovie.aspx">New Movie</a>
-        </form>
+        <br />
+
+        <br />
+
+        
+            <a type="button" class="btn btn-default" href="MoviePage.aspx">Review a Movie</a>
+        
 
 
     </div>
