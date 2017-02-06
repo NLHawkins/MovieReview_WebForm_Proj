@@ -6,7 +6,7 @@
 <head runat="server">
     <title>Movie Reviews</title>
     <link href="Content/bootstrap.css" rel="stylesheet" type="text/css" />
-    
+
     <link href="app.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -32,7 +32,11 @@
     </nav>
 
     <div class="container">
-        <h1>Movies in Db</h1>
+        <h1></h1>
+        <br />
+        <br />
+        <br />
+        <br />
         <table class="table">
             <thead>
                 <tr>
@@ -60,13 +64,14 @@
                     </td>
                     <td><%=movie.Title %></td>
                     <td><%=movie.Genre %></td>
-                    <td><%=movie.Link %></td>
+                    <td><a href="<%=movie.Link %>"><%=movie.Title %></a></td>
                     <td><%=movie.Release %></td>
+                    
                 </tr>
 
                 <%} %>
             </tbody>
-        </table>
+        </table>       
         <form class="form-inline" runat="server" action="AddMovie.aspx" method="post">
             <h4>-or-</h4>
             <h3>Add New Movie</h3>
@@ -93,11 +98,11 @@
         <script src="Scripts/bootstrap.js" type="text/javascript"></script>
     </div>
 
-     <div id="footer">
-            <div class="container">
-                <p class="text-muted">This Page made by: <a href="https://github.com/NLHawkins">Nathan Hawkins</a></p>
-            </div>
+    <div id="footer">
+        <div class="container">
+            <p class="text-muted">This Page made by: <a href="https://github.com/NLHawkins">Nathan Hawkins</a></p>
         </div>
+    </div>
 
 </body>
 </html>

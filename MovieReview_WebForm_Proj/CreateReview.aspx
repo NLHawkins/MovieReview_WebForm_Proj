@@ -35,7 +35,11 @@
 
 
     <div class="container">
-        <h2>Create Your Review</h2>
+       <h1></h1>
+        <br />
+        <br />
+        <br />
+        <br />
         <form class="form-horizontal" action="AddReview.aspx" method="post">
             <div class="form-group">
                 <label for="movieDropdown" class="col-sm-2 control-label ">Movie</label>

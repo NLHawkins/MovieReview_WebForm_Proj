@@ -36,7 +36,11 @@
    
 
     <div class="container">
-        <h2>Movie Reviews</h2>
+        <h1></h1>
+        <br />
+        <br />
+        <br />
+        <br />
         <table class="table">
             <thead>
                 <tr>
