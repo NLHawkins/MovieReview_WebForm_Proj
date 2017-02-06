@@ -102,6 +102,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App.css" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -123,7 +124,6 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="CreateReview.aspx" />
     <Content Include="default.aspx" />
-    <Content Include="EditMovie.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -139,6 +139,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="superherotheme.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -169,13 +170,6 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EditMovie.aspx.cs">
-      <DependentUpon>EditMovie.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EditMovie.aspx.designer.cs">
-      <DependentUpon>EditMovie.aspx</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201702021941552_Initial.cs" />
     <Compile Include="Migrations\201702021941552_Initial.Designer.cs">
