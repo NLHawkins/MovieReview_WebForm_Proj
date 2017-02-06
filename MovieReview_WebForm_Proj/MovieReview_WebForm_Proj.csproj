@@ -103,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.css" />
+    <Content Include="EditMovie.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -170,6 +171,13 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditMovie.aspx.cs">
+      <DependentUpon>EditMovie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditMovie.aspx.designer.cs">
+      <DependentUpon>EditMovie.aspx</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201702021941552_Initial.cs" />
     <Compile Include="Migrations\201702021941552_Initial.Designer.cs">
